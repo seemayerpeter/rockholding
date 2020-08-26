@@ -7,6 +7,8 @@ FrontEnd:
  
  -Primeng
  
+ -sqLite
+ 
 	To Run:
 	 -clone
 	 -npm install
