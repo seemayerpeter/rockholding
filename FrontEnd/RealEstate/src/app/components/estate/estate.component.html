@@ -1,0 +1,100 @@
+<div class="login">
+  <div class="inner">
+    <div class="data_image">
+      <div class="p-col-12 p-md-6">
+        <p-button (onClick)="backToList()">Vissza</p-button>
+          <div *ngIf="estateService.singleEstate.external_id" class="p-inputgroup">
+              <span>Azonosito</span>
+              <input id="external_id" type="text" pInputText placeholder="Azonosito" disabled [value]="estateService.singleEstate.external_id">
+          </div>
+      </div>
+	        <div *ngIf="estateService.singleEstate.settlement" class="p-col-12 p-md-6">
+          <div class="p-inputgroup">
+              <span>Város</span>
+              <input type="text" pInputText placeholder="Város" disabled [value]="estateService.singleEstate.settlement">
+          </div>
+      </div>
+	        <div *ngIf="estateService.singleEstate.street" class="p-col-12 p-md-6">
+          <div class="p-inputgroup">
+              <span>Utca</span>
+              <input type="text" pInputText placeholder="Utca" disabled [value]="estateService.singleEstate.street">
+          </div>
+      </div>
+	        <div *ngIf="estateService.singleEstate.price" class="p-col-12 p-md-6">
+          <div class="p-inputgroup">
+              <span>Irányár</span>
+              <input type="text" pInputText placeholder="Azonosito" disabled [value]="estateService.singleEstate.price | currency: 'Ft'">
+          </div>
+      </div>
+	        <div *ngIf="estateService.singleEstate.size != 0" class="p-col-12 p-md-6">
+          <div class="p-inputgroup">
+              <span>Méret</span>
+              <input  id="external_id" type="text" pInputText placeholder="Azonosito" disabled [value]="estateService.singleEstate.size">
+          </div>
+      </div>
+	        <div *ngIf="estateService.singleEstate.plot" class="p-col-12 p-md-6">
+          <div class="p-inputgroup">
+              <span>Telek Méret</span>
+              <input id="external_id" type="text" pInputText placeholder="Azonosito" disabled [value]="estateService.singleEstate.plot">
+          </div>
+      </div>
+	        <div *ngIf="estateService.singleEstate.rooms" class="p-col-12 p-md-6">
+          <div class="p-inputgroup">
+              <span>Szobák száma</span>
+              <input id="external_id" type="text" pInputText placeholder="Azonosito" disabled [value]="estateService.singleEstate.rooms">
+          </div>
+      </div>
+	  	  <div *ngIf="estateService.singleEstate.state" class="p-col-12 p-md-6">
+          <div class="p-inputgroup">
+              <span>Állapot</span>
+              <input  id="external_id" type="text" pInputText placeholder="Azonosito" disabled [value]="estateService.singleEstate.state">
+          </div>
+      </div>
+	  	<div *ngIf="estateService.singleEstate.heating" class="p-col-12 p-md-6">
+          <div class="p-inputgroup">
+              <span>Futés</span>
+              <input  id="external_id" type="text" pInputText placeholder="Azonosito" disabled [value]="estateService.singleEstate.heating">
+          </div>
+      </div>
+	  	        <div *ngIf="estateService.singleEstate.siting" class="p-col-12 p-md-6">
+          <div class="p-inputgroup">
+              <span>Fekvés</span>
+              <input  id="external_id" type="text" pInputText placeholder="Azonosito" disabled [value]="estateService.singleEstate.siting">
+          </div>
+      </div>
+	  	        <div *ngIf="estateService.singleEstate.utilities" class="p-col-12 p-md-6">
+          <div class="p-inputgroup">
+              <span>Közmű</span>
+              <input id="external_id" type="text" pInputText placeholder="Azonosito" disabled [value]="estateService.singleEstate.utilities">
+          </div>
+      </div>
+	  	        <div *ngIf="estateService.singleEstate.user_name" class="p-col-12 p-md-6">
+          <div class="p-inputgroup">
+              <span>Referens</span>
+              <input  id="external_id" type="text" pInputText placeholder="Azonosito" disabled [value]="estateService.singleEstate.user_name">
+          </div>
+      </div>
+	  	        <div class="p-col-12 p-md-6">
+          <div *ngIf="estateService.singleEstate.user_email" class="p-inputgroup">
+              <span>Referens Elérhetőségei</span>
+              <input *ngIf="estateService.singleEstate.user_email"id="external_id" type="text" pInputText placeholder="Azonosito" disabled [value]="estateService.singleEstate.user_email">
+			        <input *ngIf="estateService.singleEstate.user_phone"id="external_id" type="text" pInputText placeholder="Azonosito" disabled [value]="estateService.singleEstate.user_phone">
+          </div>
+      </div>
+  </div>
+<div class="p-col-12 p-md-6 leiras">
+  <div class="p-inputgroup">
+      <textarea pInputTextarea disabled rows="15" cols="150">{{estateService.singleEstate.description}}</textarea>
+  </div>
+</div>
+<div class=imagesSection>
+  <h2>Képek</h2>
+  <p-galleria [(value)]="estateService.singleEstate.images.image" [responsiveOptions]="responsiveOptions" [containerStyle]="{'max-width': '640'}" [numVisible]="5"
+      [circular]="true" [showItemNavigators]="true" [showThumbnails]="false">
+      <ng-template pTemplate="item" let-item>
+          <img [src]="item.src" style="width: 100%; display: block;" />
+      </ng-template>
+  </p-galleria>
+  </div>
+</div>
+</div>

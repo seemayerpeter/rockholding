@@ -1,0 +1,28 @@
+span {
+  margin: 0.5rem;
+  width: 10rem;
+}
+
+.p-inputgroup {
+  width: fit-content;
+}
+
+.p-inputtext {
+  width: 17rem;
+}
+
+.leiras {
+  position: absolute;
+    top: 5rem;
+    left: 31rem;
+}
+
+.imagesSection{
+  width: 30rem;
+  position: absolute;
+  left: 40rem;
+}
+
+h2 {
+  text-align: center;
+}

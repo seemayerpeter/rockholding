@@ -1,0 +1,12 @@
+.login {
+margin-top: 10rem;
+}
+.inner {
+    width: 50%;
+    margin: 0 auto;
+    width:13.5rem;
+}
+
+:host >>> .p-button {
+  width: 13.5rem;
+}

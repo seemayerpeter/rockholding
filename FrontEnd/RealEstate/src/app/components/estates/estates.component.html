@@ -1,0 +1,29 @@
+<p-table [value]="estateService.estates">
+  <ng-template pTemplate="caption">
+      <div class="p-d-flex p-ai-center p-jc-between mainHeader">
+          Ingatlanok
+      </div>
+  </ng-template>
+  <ng-template pTemplate="header">
+      <tr>
+          <th>Indexkép</th>
+          <th>Azonosító</th>
+          <th>Jelleg, típus </th>
+          <th>Város</th>
+          <th>Referens</th>
+          <th>Irányár</th>
+          <th>Méret</th>
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-estate>
+      <tr>
+        <td><img [src]="estate.images.image[0].src" [alt]="estate.name" width="100" class="p-shadow-4" /></td>
+          <td><a routerLink="/ingatlanok/adatlap/{{estate.external_id}}" routerLinkActive="active">{{estate.external_id}}</a></td>
+          <td>{{estate.building ? estate.type + '/' + estate.building : estate.type}}</td>
+          <td>{{estate.settlement}}</td>
+          <td>{{estate.user_name}}</td>
+          <td>{{estate.price | currency:"Ft"}}</td>
+          <td>{{estate.size != 0 ? estate.size : estate.plot}}</td>
+      </tr>
+  </ng-template>
+</p-table>

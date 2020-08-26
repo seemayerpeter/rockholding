@@ -1,0 +1,11 @@
+@import url("primeicons/primeicons.css");
+@import url("primeng\resources\themes\bootstrap4-dark-blue\theme.css");
+@import url("primeng/resources/primeng.min.css");
+
+body {
+  padding: 2em;
+}
+
+html {
+  background-color: steelblue;
+}

@@ -1,0 +1,40 @@
+<div class="login">
+  <div class="inner">
+      <div class="p-col-12 p-md-6">
+          <div class="p-inputgroup">
+              <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+              <input pInputText type="text" placeholder="Felhasználónév" [(ngModel)]="this.username">
+          </div>
+      </div>
+
+      <div class="p-col-12 p-md-6">
+          <div class="p-inputgroup">
+              <span class="p-inputgroup-addon"><i class="pi pi-key"></i></span>
+              <input pInputText type="password"  placeholder="Jelszó" [(ngModel)]="this.password">
+          </div>
+      </div>
+
+    <div class="p-col-12">
+      <div class="p-col-12">
+        <div class="p-inputgroup">
+          <p-button label="Bejelentkezés" (onClick)="onLogin()"></p-button>
+        </div>
+      </div>
+    </div>
+    <div class="p-col-12">
+      <div class="p-col-12">
+        <div class="p-inputgroup">
+          <p-button class="LoginButton" label="Regisztráció" (onClick)="onRegister()" ></p-button>
+        </div>
+      </div>
+    </div>
+    <div class="p-col-12">
+      <div class="p-col-12">
+        <div class="p-inputgroup">
+          <h2>{{userService.error ? userService.error : '' }}</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
