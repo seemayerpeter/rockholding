@@ -16,4 +16,6 @@ BackEnd:
 	 -clone
 	 -composer install
 	 -php -S localhost:8000 -t public
+
+NOTE: PASSWORD HANDLING AND AUTHENTICATION NOT IMPLEMENTED PROPERLY - WOULD NOT DO THIS IN PRODUCTION
 	
